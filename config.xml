@@ -20,14 +20,14 @@
     <preference name="android-installLocation" value="auto"/>
     <preference name="android-build-tool" value="gradle" />
     <preference name="windows-target-version" value="8.0" />
-    <gap:plugin name="org.apache.cordova.console"/>
-    <gap:plugin name="org.apache.cordova.contacts"/>
-    <gap:plugin name="org.apache.cordova.device" version="0.2.3" />
-    <gap:plugin name="org.apache.cordova.geolocation"/>
-    <gap:plugin name="org.apache.cordova.globalization"/>
-    <gap:plugin name="org.apache.cordova.media"/>
-    <gap:plugin name="org.apache.cordova.network-information"/>
-    <gap:plugin name="cordova-plugin-mauron85-background-geolocation" source="npm"/>
+    <plugin name="org.apache.cordova.console" source="npm"/>
+    <plugin name="org.apache.cordova.contacts" source="npm"/>
+    <plugin name="org.apache.cordova.device" source="npm"/>
+    <plugin name="org.apache.cordova.geolocation" source="npm"/>
+    <plugin name="org.apache.cordova.globalization" source="npm"/>
+    <plugin name="org.apache.cordova.media" source="npm"/>
+    <plugin name="org.apache.cordova.network-information" source="npm"/>
+    <plugin name="cordova-plugin-mauron85-background-geolocation" source="npm"/>
     
     <feature name="LaunchNavigator">
         <param name="android-package" value="uk.co.workingedge.phonegap.plugin.LaunchNavigator" />

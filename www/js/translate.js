@@ -6,9 +6,9 @@ var t = {};
 translate.ru = {};
 translate.ru.lang="ru";
 translate.ru.kohanalang="ru_RU";
-translate.ru.serverip= "http://bodychief.de/panel";
-translate.ru.serverip_dev="http://bodychief.de/dev/web/panel";
-translate.ru.serverip_localhost="http://ru.localhost/bodychief_live/web/panel";
+translate.ru.serverip= "http://olicom.biz.pl/projekty/fitmix";
+translate.ru.serverip_dev="http://olicom.biz.pl/projekty/fitmix";
+translate.ru.serverip_localhost="http://olicom.biz.pl/projekty/fitmix";
 translate.ru.bc_kierowcy = 'BodyChief Водителя';
 translate.ru.exit_msg = 'Вы уверены, что хотите выйти?';
 translate.ru.yes = 'Да';
@@ -60,9 +60,9 @@ translate.ru.route = 'TRASA';
 translate.de = {};
 translate.de.lang="de";
 translate.de.kohanalang="de_DE";
-translate.de.serverip= "http://bodychief.de/panel";
-translate.de.serverip_dev="http://bodychief.de/dev/web/panel";
-translate.de.serverip_localhost="http://de.localhost/bodychief_live/web/panel";
+translate.de.serverip= "http://olicom.biz.pl/projekty/fitmix";
+translate.de.serverip_dev="http://olicom.biz.pl/projekty/fitmix";
+translate.de.serverip_localhost="http://olicom.biz.pl/projekty/fitmix";
 translate.de.bc_kierowcy = 'BodyChief des Fahrers';
 translate.de.exit_msg = 'Bist Du sicher, dass du ausgehen willst?';
 translate.de.yes = 'Ja';
@@ -114,9 +114,9 @@ translate.de.route = 'TRASA';
 translate.pl = {};
 translate.pl.lang="pl";
 translate.pl.kohanalang="pl_PL";
-translate.pl.serverip= "http://bodychief.pl/panel";
-translate.pl.serverip_dev="http://bodychief.pl/dev/web/panel";
-translate.pl.serverip_localhost="http://localhost/bodychief_live/web/panel";
+translate.pl.serverip= "http://olicom.biz.pl/projekty/fitmix";
+translate.pl.serverip_dev="http://olicom.biz.pl/projekty/fitmix";
+translate.pl.serverip_localhost="http://olicom.biz.pl/projekty/fitmix";
 translate.pl.bc_kierowcy = 'Foodpartner Kierowcy';
 translate.pl.exit_msg = 'Czy napewno chcesz wyjść?';
 translate.pl.yes = 'Tak';
@@ -163,7 +163,7 @@ translate.pl.point_details = 'SZCZEGÓŁY PUNKTU';
 translate.pl.thispointhas = 'Ten punkt ma';
 translate.pl.delivery = 'dostaw';
 translate.pl.route = 'TRASA';
-
+/*
 if (userLang == "pl" || userLang == "PL"  || userLang == "pl_PL" || userLang == "pl-PL" ) {
     t = translate.pl;
 } else
@@ -172,4 +172,5 @@ if (userLang == "ru" || userLang == "ru-RU" || userLang == "ru-MI" || userLang =
     t = translate.ru;
 } else {
     t = translate.de;
-}
+}*/
+   t = translate.pl;

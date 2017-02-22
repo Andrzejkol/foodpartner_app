@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>FoodPartner</title>
+    </head>
+    <body>
+
+        <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+        <script type="text/javascript" src="js/translate.js"></script> 
+        <div class="popup_dialog" id="alert_dialog">
+            <div class="popup_wrapp">
+                <div class="popup_text">
+                    <h2></h2>
+                </div>
+                <div class="popup_btns">
+                    <span class="btn" id="btn_ok">OK</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_dialog" id="exit_dialog">
+            <div class="popup_wrapp">
+                <div class="popup_text">
+                    <h2><script>document.write(t['exit_msg']);</script></h2>
+                </div>
+                <div class="popup_btns">
+                    <span class="btn" id="btn_yes"><script>document.write(t['yes']);</script></span>
+                    <span class="btn btn-transparent" id="btn_no"><script>document.write(t['no']);</script></span>
+                </div>
+            </div>
+        </div>
+        <div class="popup_dialog" id="end_dialog">
+            <div class="popup_wrapp">
+                <div class="popup_text">
+                    <h2><script>document.write(t['end_work']);</script></h2>
+                </div>
+                <div class="popup_btns">
+                    <span class="btn" id="btn_yes"><script>document.write(t['yes']);</script></span>
+                    <span class="btn btn-transparent" id="btn_no"><script>document.write(t['no']);</script></span>
+                </div>
+            </div>
+        </div>
+        <div class="page page1">
+            <div class="wrapper">
+                <img src="img/logo.png" class="logo"/>
+                <h2><script>document.write(t['logging']);</script></h2>
+                <div class="login_input">
+                    <label><script>document.write(t['login']);</script></label>
+                    <input type="text" name="login" id="login" value=""/>
+                    <label><script>document.write(t['pass']);</script></label> 
+                    <input type="password" name="password" id="password" value=""/>
+                    <span class="btn"><script>document.write(t['log_in']);</script></span>
+                </div>
+            </div>
+        </div>
+        <div class="page page2">
+            <div class="wrapper">
+                <img src="img/logo.png"  class="logo"/>
+                <div class="main_menu_title">
+                    <span class=""><script>document.write(t['logged_as']);</script>:</span>
+                    <span id="driver_name"></span>
+                </div>
+                <div id="main_menu">
+                    <div class="main_nav">
+                        <div class="menuitem" id="menu_start"><span class="btn"><script>document.write(t['start_work']);</script></span></div>
+                        <div class="menuitem" id="menu_map"><span class="btn"><script>document.write(t['show_map']);</script></span></div>
+                        <div class="menuitem" id="menu_list"><span class="btn"><script>document.write(t['show_list']);</script></span></div>
+                        <div class="menuitem" id="menu_logout"><span class="btn btn-transparent"><script>document.write(t['logout']);</script></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page3">
+            <div class="wrapper">
+                <div class="page3_top">                    
+                    <img src="img/logo.png"  class="logo"/>
+                    <div id="main_menu">
+                        <div class="main_nav">
+                            <div class="menuitem btn btn-beige" id="menu_back"><script>document.write(t['return_to_menu']);</script></div>
+                        </div>
+                    </div>
+                    <h2><script>document.write(t['order_list']);</script></h2>
+                </div>
+                <div class="scroll-wrapp">
+                    <div id="main_list_all" class="points_as_list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-sidebar sidebar menu_list">
+            <div class="wrapper">
+                <div class="left-wrapper">
+                    <div id="left_menu">
+                        <div class="left_nav">
+                            <div class="mapbtns" id="menu_backtomain"><span class="btn btn-beige"><script>document.write(t['return_to_main']);</script></span></div>
+                            <div class="mapbtns" id="menu_end"><span class="btn btn-beige"><script>document.write(t['end_work']);</script></span></div>
+                            <div class="mapbtns" id="menu_hide"><span></span></div>
+                        </div>
+                        <h3><script>document.write(t['point_list']);</script></h3>
+                    </div>
+                </div>
+                <div class="mycomment_validate">
+                    <div class="validate_wrapper">
+                        <h2><script>document.write(t['insert_comments']);</script></h2>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="scroll-wrapp">
+                    <div id="left_list_all" class="points_as_list">
+
+                        <div class="pointlist_item pointdetails" data-pointno="">
+
+                            <div class="pointlist_details">
+
+                                <div class="pointlist-group" id="d_name">
+                                    <div class="group-label"><span class="list_no"></span></div>
+                                    <div class="group-control"></div>
+                                    <div class="pointlist-buttons">
+                                        <div id="tohand"></div>
+                                        <div id="delivered" data-pointno=""></div>
+                                    </div>
+                                </div>
+                                <div class="pointlist-group" id="d_delivery_type">
+                                    <div class="group-label"><script>document.write(t['order_type']);</script></div>
+                                    <div class="group-control"></div>
+                                </div>
+                                <div class="pointlist-group" id="d_address">
+                                    <div class="group-label"><script>document.write(t['address']);</script></div>
+                                    <div class="group-control"></div>
+                                </div>
+                                <div class="pointlist-group" id="d_diet_type">
+                                    <div class="group-label"><script>document.write(t['diet_type']);</script></div>
+                                    <div class="group-control"></div>
+                                </div>
+                                <div class="pointlist-group" id="d_phone">
+                                    <div class="group-label"><script>document.write(t['phone']);</script></div>
+                                    <div class="group-control"></div>
+                                </div>
+                                <div class="pointlist-group" id="d_driver_comments">
+                                    <div class="group-label"><script>document.write(t['driver_info']);</script></div>
+                                    <div class="group-control"></div>
+                                </div>
+                                <div class="pointlist-group" id="d_my_comment">
+                                    <div class="group-control">
+                                        <script>document.write('<textarea name="mycomment" id="mycomment"  placeholder="' + t['own_comment'] + '"></textarea>');</script>
+                                        <span class="btn" id="savecomment" data-pointno="">ok</span></div>
+                                </div>
+                                <div class="pointlist-controls">
+                                    <span class="btn" id="lauchnav" data-pointno=""><script>document.write(t['navi']);</script></span>
+                                    <span class="btn_showonmap" id="show_on_map" data-pointno=""></span>
+                                    <span class="btn btn-beige" id="not_delivered" data-pointno=""><script>document.write(t['not_delivered']);</script></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar sidebar menu_point">
+            <div class="right-overlay"></div>
+            <div id="right_menu">
+                <h2><script>document.write(t['point_details']);</script></h2>
+                <div class="mapbtns" id="menu_hide"><span></span></div>
+                <h3><script>document.write(t['thispointhas']);</script> <span class="point_count">1</span> <span class="point_count_txt"><script>document.write(t['delivery']);</script></span></h3>
+            </div>
+            <div class="mycomment_validate">
+                    <div class="validate_wrapper">
+                        <h2><script>document.write(t['insert_comments']);</script></h2>
+                        <span></span>
+                    </div>
+                </div>
+            <div class="scroll-wrapp">
+                <div class="wrapper points_as_list">
+                    <div class="pointlist_item pointdetails" data-pointno="">
+                        <div class="delivery-details pointlist_details delivery_control">
+                            <div class="pointlist-group " id="d_name">
+                                <div class="group-label"><span class="list_no"></span></div>
+                                <div class="group-control"></div>
+                                <div class="pointlist-buttons">
+                                    <div id="tohand"></div>
+                                    <div id="delivered" data-pointno=""></div>
+                                </div>
+                            </div>
+                            <div class="pointlist-group" id="d_delivery_type">
+                                <div class="group-label"><script>document.write(t['order_type']);</script>:</div>
+                                <div class="group-control"></div>
+                            </div>
+                            <div class="pointlist-group" id="d_address">
+                                <div class="group-label"><script>document.write(t['address']);</script>:</div>
+                                <div class="group-control"></div>
+                            </div>
+                            <div class="pointlist-group" id="d_diet_type">
+                                <div class="group-label"><script>document.write(t['diet_type']);</script>:</div>
+                                <div class="group-control"></div>
+                            </div>
+                            <div class="pointlist-group" id="d_phone">
+                                <div class="group-label"><script>document.write(t['phone']);</script>:</div>
+                                <div class="group-control"></div>
+                            </div>
+                            <div class="pointlist-group" id="d_driver_comments">
+                                <div class="group-label"><script>document.write(t['driver_info']);</script>:</div>
+                                <div class="group-control"></div>
+                            </div>
+                            <div class="pointlist-group" id="d_my_comment">
+
+                                <div class="group-control">
+                                    <script>document.write('<textarea name="mycomment" id="mycomment" placeholder="' + t['own_comment'] + '"></textarea>');</script>
+
+                                    <span class="btn" id="savecomment" data-pointno="">ok</span></div>
+                            </div>
+                            <div class="pointlist-controls">
+                                <span class="btn" id="lauchnav" data-pointno=""><script>document.write(t['navi']);</script></span>
+                                <span class="btn_showonmap" id="show_on_map" data-pointno=""></span>
+                                <span class="btn btn-beige" id="not_delivered" data-pointno=""><script>document.write(t['not_delivered']);</script></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page menu_map">
+            <div class="wrapper">
+                <div class="topheader">
+                    <h2><script>document.write(t['route']);</script></h2>
+                    <span id="submenu"></span>
+                </div>
+                <div id="main_map"></div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+                                    app.initialize();
+
+        </script>
+
+        <script type="text/javascript" src="js/markerclusterer.js"></script>
+
+
+        <script type="text/javascript" src="js/app.js"></script> 
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdc5tN-GQSM6kXFUVFJ-jIK2W1YcoG0q8&callback=initMap"
+        defer></script>
+    </body>
+</html>

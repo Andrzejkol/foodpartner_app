@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.FPkierowcy" version="1.0">
-    <name>FoodPartner Kierowca</name>
-    <description>Aplikacja dla kierowców Foodpartner</description>
+    <name>Kierowca</name>
+    <description>Aplikacja dla kierowców</description>
     <author href="http://olicom.pl" email="andrzej@olicom.pl">Olicom Interactive Sp. z o.o.</author>
     <content src="index.html"/> 
     <preference name="permissions" value="none"/>

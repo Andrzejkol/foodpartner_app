@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.FPkierowcy" version="1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.FPkierowcy" version="2.0">
     <name>Kierowca</name>
     <description>Aplikacja dla kierowców</description>
     <author href="http://olicom.pl" email="andrzej@olicom.pl">Olicom Interactive Sp. z o.o.</author>

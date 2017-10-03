@@ -568,19 +568,19 @@ $(function () {
                     alertbox(t['insert_password']);
                 } else {
                     jsonObj = {};
-                    if ($('.page1 #login').val() === "devtest" || $('.page1 #login').val() === "Devtest") {
-                        jsonObj["email"] = 'kier14';
-                        jsonObj["passwd"] = 'BCkier5614@';
+                    if ($('.page1 #login').val().substring(0, 2) === "d_" || $('.page1 #login').val().substring(0, 2) === "D_") {
+                         jsonObj["email"] = $('.page1 #login').val().substring('2');
                         serverip = serverip_dev;
-                    } else if ($('.page1 #login').val() === "localhost") {
-                        jsonObj["email"] = 'kier14';
-                        jsonObj["passwd"] = 'BCkier5614@';
+                    } else if ($('.page1 #login').val().substring(0, 2) === "l_" || $('.page1 #login').val().substring(0, 2) === "L_") {
+                        jsonObj["email"] = $('.page1 #login').val().substring('2');
                         serverip = serverip_local;
                     } else {
                         jsonObj["email"] = $('.page1 #login').val();
-                        jsonObj["passwd"] = $('.page1 #password').val();
                     }
+					
+                    jsonObj["passwd"] = $('.page1 #password').val();
                     json = "";
+					
                     json = JSON.stringify(jsonObj);
                     $.ajax({/* JSON logowania*/
                         method: "POST",

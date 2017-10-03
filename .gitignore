@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.psd
+nbproject/private/private.xml
+.svn
+.svn-base
